@@ -1,0 +1,24 @@
+{
+    "tickets": [
+      {
+        "key": "QA-101",
+        "summary": "Login Feature",
+        "type": "Functional",
+        "priority": "High",
+        "test_cases": [
+          {
+            "id": "QA-101-TC-01",
+            "description": "Verify successful login with valid credentials",
+            "category": "Functional",
+            "priority": "High"
+          },
+          {
+            "id": "QA-101-TC-02",
+            "description": "Verify error message for invalid credentials",
+            "category": "Edge Case",
+            "priority": "Medium"
+          }
+        ]
+      }
+    ]
+  }

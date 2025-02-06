@@ -1,0 +1,74 @@
+{
+    "test_metadata": {
+      "test_name": "Login Load Test",
+      "test_date": "2025-02-06T12:00:00Z",
+      "test_duration": "10m",
+      "total_requests": 5000,
+      "concurrent_users": 50,
+      "test_tool": "JMeter"
+    },
+    "requests": [
+      {
+        "endpoint": "/api/login",
+        "method": "POST",
+        "total_requests": 5000,
+        "success_count": 4950,
+        "error_count": 50,
+        "error_rate": "1%",
+        "average_response_time_ms": 320,
+        "min_response_time_ms": 150,
+        "max_response_time_ms": 900,
+        "percentiles": {
+          "50th": 300,
+          "90th": 600,
+          "95th": 750,
+          "99th": 850
+        },
+        "throughput_rps": 8.3
+      },
+      {
+        "endpoint": "/api/user/profile",
+        "method": "GET",
+        "total_requests": 4000,
+        "success_count": 3980,
+        "error_count": 20,
+        "error_rate": "0.5%",
+        "average_response_time_ms": 210,
+        "min_response_time_ms": 100,
+        "max_response_time_ms": 600,
+        "percentiles": {
+          "50th": 200,
+          "90th": 400,
+          "95th": 500,
+          "99th": 550
+        },
+        "throughput_rps": 6.5
+      },
+      {
+        "endpoint": "/api/orders",
+        "method": "GET",
+        "total_requests": 3000,
+        "success_count": 2995,
+        "error_count": 5,
+        "error_rate": "0.16%",
+        "average_response_time_ms": 500,
+        "min_response_time_ms": 250,
+        "max_response_time_ms": 1200,
+        "percentiles": {
+          "50th": 480,
+          "90th": 900,
+          "95th": 1100,
+          "99th": 1150
+        },
+        "throughput_rps": 5.2
+      }
+    ],
+    "summary": {
+      "total_requests": 12000,
+      "successful_requests": 11925,
+      "failed_requests": 75,
+      "average_response_time_ms": 343,
+      "error_rate": "0.63%",
+      "max_throughput_rps": 8.3
+    }
+  }  
